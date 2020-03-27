@@ -21,8 +21,8 @@ def slice_and_dice(text: str = text) -> list:
        See the Bite description for step by step instructions"""
     results = []
     print(text.strip())
-    print(text.strip().splitlines(keepends=True))
-    for line in text.strip().splitlines(keepends=True):
+    print(text.strip().splitlines()
+    for line in text.strip().splitlines():
         line = line.lstrip()
 
         if line[0] not in ascii_lowercase:
