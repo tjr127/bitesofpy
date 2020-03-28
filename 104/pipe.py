@@ -5,12 +5,12 @@ Keep calm and code in Python!
 Become a PyBites ninja!"""
 
 def split_in_columns(message=message):
-   split = message.split('\n')
-   print(split)
-   join = '|'.join(split)
-   print(join)
-   return join
+   '''lines = message.split('\n')
+   print(lines)
+   joinlines ='|'.join(lines)
+   print(joinlines)'''
+   return '|'.join(message.splitlines())
 
 
 if __name__ == "__main__":
-   split_in_columns()
+   print(split_in_columns())

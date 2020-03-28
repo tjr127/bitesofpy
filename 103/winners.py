@@ -17,9 +17,9 @@ def print_game_stats(games_won):
        (Note that as of Python 3.7 - which we're using atm - dict insert order
        is retained so no sorting is required for this Bite.)
     """
-    for name, num_games in games_won.items():
-       games = "game" if num_games == 1 else "games"
-       print(f'{name} has won {num_games} {games}')
+    for name, won in games_won.items():
+       game = "game" if won ==1 else "games"
+       print(f'{name} has won {won} {game}')
 
 if __name__ == "__main__":
    print_game_stats(games_won)
