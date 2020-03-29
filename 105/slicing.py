@@ -1,4 +1,4 @@
-from string import ascii_lowercase
+from string import ascii_lowercase, ascii_letters
 
 text = """
 One really nice feature of Python is polymorphism: using the same operation
@@ -22,6 +22,7 @@ def slice_and_dice(text: str = text) -> list:
     results = []
     #print(text.strip())
     print(text.strip().splitlines())
+    print(ascii_letters)
     for line in text.strip().splitlines():
         line = line.lstrip()
 
