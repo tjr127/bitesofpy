@@ -10,14 +10,18 @@ INVALID_DAY = 'Not a valid day'
 
 
 def get_workout_motd(day):
-   day = day.title()
+   '''day = day.title()
 
    for weekday, workout in WORKOUT_SCHEDULE.items():
       if day == weekday and workout == "Rest":
          return(CHILL_OUT)
       elif day == weekday:
          return(TRAIN.format(workout))
-   return(INVALID_DAY)
+   return(INVALID_DAY)'''
+   workout = WORKOUT_SCHEDULE.get(day.title())
+   if workout is None:
+      return INVALID_DAY
+   return CHILL_OUT if workout == REST else TRAIN.format(workout)
 
 """First title case the passed in day argument
        (so monday or MONDAY both result in Monday).
